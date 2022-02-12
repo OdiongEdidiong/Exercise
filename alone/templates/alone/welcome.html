@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<style>
+    h2{
+        background-color: coral;
+        margin: -10px;
+        height: 50px;
+        padding: 5px 0px 0px 5px;
+    }
+    a{
+        text-decoration: none;
+        padding: 7px;
+        border-radius: 20px;
+        border: 2px solid coral;
+        background-color: coral;
+        color: black;
+        margin: 20px 1px 1px 1px;
+        display: block;
+        width: 100px;
+        text-align: center;
+        box-shadow:  0px 2px 3px 0px;
+        /* transition: 0.5s linear; */
+    }
+    a:hover{
+        box-shadow: 0px 0px 0px 0px;
+        border: 2px solid transparent;
+        /* background-color: lightseagreen; */
+    }
+</style>
+<body>
+    <h2>Welcome to your homepage {{request.user.username}}</h2>
+    <a href="{%url 'logout'%}">Logout</a>
+</body>
+</html>
